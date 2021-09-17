@@ -1,0 +1,11 @@
+TP 1: Lavandería
+	- Impresión inicial: La idea es obtener todas la combinación entre prendas xi y xj (siendo x el nro de prenda, 
+	i= 1, 2, ..20, j= 1, 2, ..20, i =/ j) que en un principio no pueden ser mezcladas. 
+	Luego de eso voy a tener un numero combinaciones de prenda posibles mucho menor, luego tendre que ver cuanto será 
+	la cantidad de prendas maximas que podre tener en cada lavado, y en base a eso, teniendo el tiempo de lavado mayor 
+	voy a poner las prendas en distintos lavados.
+	
+	- Como primer acercamiento, voy a tomar una matriz de 20x20, y poner en '1' las combinación de prenda xi y xj que no puede juntarse. 
+	Luego, sabiendo que el tiempo maximo de lavado de una prenda es 10, y son 20 prendas, voy a ir generando un lavado con un tiempo maximo,
+	por ejemplo 5, entre prendas que son posible juntarse, en caso de que no se puedan juntar, genero otro lavado y así. Luego avanzo a otro
+	tiempo maximo, de esta forma regulo que no sea tan disparejo el tiempo entre prendas y desfavorecer a las que se lavan rapido.
