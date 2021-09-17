@@ -8,8 +8,11 @@
 //Lista de prendas
 std::vector<std::vector<int>> matrix(CANT_MAX_PRENDAS, std::vector<int>(CANT_MAX_PRENDAS));
 int* tiempos = new int[CANT_MAX_PRENDAS];
+int numero_lavado = 1;
+int* prendas_lavado = new int[CANT_MAX_PRENDAS];
+bool termino = false;
 
-int main() {
+void load_prendas() {
   char line[CANT_MAX];
   FILE *lavados = fopen("problema_1.txt", "r");
   while (fgets(line, sizeof(line), lavados)) {
@@ -30,16 +33,60 @@ int main() {
     }
   }
   fclose(lavados);
+}
+
+int main() {
+  load_prendas();
+
+  for(int i = 0; i < CANT_MAX_PRENDAS; i++){
+    prendas_lavado[i] = 0;
+  }
+
+  while(!termino) {
+    int cont = 0;
+    for(int i = 0; i < CANT_MAX_PRENDAS; i++) {
+      if(prendas_lavado[i] != 0) {
+        cont++;
+      }
+      if (cont == 20) termino = true;
+    }
+
+    for(int j = 0; j < CANT_MAX_PRENDAS; j++) {
+      if(prendas_lavado[j] == 0) {
+        if(tiempos[j] < 5) {
+          prendas_lavado[j] = numero_lavado;
+          for(int k = 0; k < CANT_MAX_PRENDAS; k++) {
+            if(matrix[j][k] != 1 && j != k && tiempos[k] < 5) {
+              prendas_lavado[k] = numero_lavado;
+            }
+          }
+        } else {
+          prendas_lavado[j] = numero_lavado;
+          for(int k = 0; k < CANT_MAX_PRENDAS; k++) {
+            if(matrix[j][k] != 1 && j != k && tiempos[k] >= 5) {
+              prendas_lavado[k] = numero_lavado;
+            }
+          }
+        }
+      }
+      numero_lavado++;
+    }
+  }
+
+  FILE *salida = fopen("salida.txt", "w");
+  for(int i = 0; i < CANT_MAX_PRENDAS; i++) {
+    fprintf(salida, "%d %d\n", i+1, prendas_lavado[i]);
+  }
 
   // for (int i = 0; i < matrix.size(); i++){
   //   for (int j = 0; j < matrix[i].size(); j++)
   //   {
-  //       printf("%d", matrix[i][j]);
+  //       printf("%d ", matrix[i][j]);
   //   }
   //   printf("\n");
   // }
-  for (int i = 0; i < 20; i++) {
-    printf("%d\n", tiempos[i]);
-  }
+  // for (int i = 0; i < CANT_MAX_PRENDAS; i++) {
+  //   printf("%d\n", prendas_lavado[i]);
+  // }
   return 0;
 }
