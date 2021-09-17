@@ -56,14 +56,14 @@ int main() {
         if(tiempos[j] < 5) {
           prendas_lavado[j] = numero_lavado;
           for(int k = 0; k < CANT_MAX_PRENDAS; k++) {
-            if(matrix[j][k] != 1 && j != k && tiempos[k] < 5) {
+            if(matrix[j+1][k+1] != 1 && j != k && tiempos[k+1] < 5) {
               prendas_lavado[k] = numero_lavado;
             }
           }
         } else {
           prendas_lavado[j] = numero_lavado;
           for(int k = 0; k < CANT_MAX_PRENDAS; k++) {
-            if(matrix[j][k] != 1 && j != k && tiempos[k] >= 5) {
+            if(matrix[j+1][k+1] != 1 && j != k && tiempos[k+1] >= 5) {
               prendas_lavado[k] = numero_lavado;
             }
           }
