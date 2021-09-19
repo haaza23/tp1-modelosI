@@ -9,3 +9,7 @@ TP 1: Lavandería
 	Luego, sabiendo que el tiempo maximo de lavado de una prenda es 10, y son 20 prendas, voy a ir generando un lavado con un tiempo maximo,
 	por ejemplo 5, entre prendas que son posible juntarse, en caso de que no se puedan juntar, genero otro lavado y así. Luego avanzo a otro
 	tiempo maximo, de esta forma regulo que no sea tan disparejo el tiempo entre prendas y desfavorecer a las que se lavan rapido.
+
+	- Viendo los resultados obtenidos, se cumplen las restricciones para no mezclar prendas incompatibles, pero dejé de lado la optimización en 
+	cuanto al tiempo que demora cada prenda. Voy a separar en 2 sectores de tiempo: 1-5 / 5-10, y si en un lavado ya hay una prenda que ocupa
+	mas de 5, donde anteriormente podia entrar una prenda compatible que demora menos de 5, ahora voy a ponerla en otro lavado.

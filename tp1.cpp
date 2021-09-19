@@ -48,10 +48,12 @@ int main() {
       for(int k = 0; k < CANT_MAX_PRENDAS; k++) {
         if(matrix[j][k] != 1 && j != k && prendas_lavado[k] == 0) {
           bool no_cumple = false;
+          bool es_mayor = false;
           for(int a = 0; a < CANT_MAX_PRENDAS; a++) {
             if (matrix[a][k] == 1 && prendas_lavado[a] == numero_lavado) no_cumple = true;
+            if (prendas_lavado[a] == numero_lavado && tiempos[a] > 5 && tiempos[k] <= 5) es_mayor = true;
           }
-          if(!no_cumple) {
+          if(!no_cumple && !es_mayor) {
             prendas_lavado[k] = numero_lavado;
           }
         }
@@ -65,25 +67,25 @@ int main() {
     fprintf(salida, "%d %d\n", i+1, prendas_lavado[i]);
   }
 
-  printf("   ");
-  for (int i = 0; i < matrix.size(); i++){
-    printf("%d  ", i);
-  }
-  printf("\n");
-  for (int i = 0; i < matrix.size(); i++){
-    printf("%d: ", i);
-    for (int j = 0; j < matrix[i].size(); j++)
-    {
-      if(j > 9){
-        printf("%d   ",matrix[i][j]);
-      } else {
-        printf("%d  ",matrix[i][j]);
-      }
-    }
-    printf("\n");
-  }
-  for (int i = 0; i < CANT_MAX_PRENDAS; i++) {
-    printf("%d\n", prendas_lavado[i]);
-  }
+  // printf("   ");
+  // for (int i = 0; i < matrix.size(); i++){
+  //   printf("%d  ", i);
+  // }
+  // printf("\n");
+  // for (int i = 0; i < matrix.size(); i++){
+  //   printf("%d: ", i);
+  //   for (int j = 0; j < matrix[i].size(); j++)
+  //   {
+  //     if(j > 9){
+  //       printf("%d   ",matrix[i][j]);
+  //     } else {
+  //       printf("%d  ",matrix[i][j]);
+  //     }
+  //   }
+  //   printf("\n");
+  // }
+  // for (int i = 0; i < CANT_MAX_PRENDAS; i++) {
+  //   printf("%d\n", prendas_lavado[i]);
+  // }
   return 0;
 }
