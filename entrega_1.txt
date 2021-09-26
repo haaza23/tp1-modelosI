@@ -13,3 +13,8 @@ TP 1: Lavandería
 	- Viendo los resultados obtenidos, se cumplen las restricciones para no mezclar prendas incompatibles, pero dejé de lado la optimización en 
 	cuanto al tiempo que demora cada prenda. Voy a separar en 2 sectores de tiempo: 1-5 / 5-10, y si en un lavado ya hay una prenda que ocupa
 	mas de 5, donde anteriormente podia entrar una prenda compatible que demora menos de 5, ahora voy a ponerla en otro lavado.
+
+	- Opiniones finales: Habiendo probado de optimizar el modelo, teniendo en cuenta el tiempo que demoran las prendas, realizando un analisis
+	de los resultados e intentando separar las prendas compatibles dentro de un mismo lavado también por el tiempo que demora,
+	los resultados obtenidos fueron peores. Por eso concluyo que el mejor resultado obtenido es de "61", siendo pocos los casos
+	donde un grupo de prendas compatibles tienen una diferencia grande en el tiempo de demora.
