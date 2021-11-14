@@ -2,8 +2,8 @@
 #include <iostream>
 #include <vector>
 
-#define CANT_MAX 100
-#define CANT_MAX_PRENDAS 20
+#define CANT_MAX 1000
+#define CANT_MAX_PRENDAS 385
 
 //Lista de prendas
 std::vector<std::vector<int>> matrix(CANT_MAX_PRENDAS, std::vector<int>(CANT_MAX_PRENDAS));
@@ -14,7 +14,7 @@ bool termino = false;
 
 void load_prendas() {
   char line[CANT_MAX];
-  FILE *lavados = fopen("problema_1.txt", "r");
+  FILE *lavados = fopen("problema_2.txt", "r");
   while (fgets(line, sizeof(line), lavados)) {
     char flag = fgetc(lavados);
     char flag_from_input;

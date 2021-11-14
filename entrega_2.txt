@@ -1,0 +1,2 @@
+TP2:
+    - Idea inicial: Pruebo con la solución formada en el tp anterior para conocer que resultado se obtiene, viendo tambien si con las dimensiones del nuevo problema la solución esperada es válida.
