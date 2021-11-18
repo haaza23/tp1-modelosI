@@ -43,10 +43,11 @@ int main() {
   }
 
   for(int j = 0; j < CANT_MAX_PRENDAS; j++) {
-    if(prendas_lavado[j] == 0) {
+    if(prendas_lavado[j] == 0 && tiempos[j] > 10) {
+      printf("%d  \n", j);
       prendas_lavado[j] = numero_lavado;
       for(int k = 0; k < CANT_MAX_PRENDAS; k++) {
-        if(matrix[j][k] != 1 && j != k && prendas_lavado[k] == 0) {
+        if(matrix[j][k] != 1 && j != k && prendas_lavado[k] == 0  && tiempos[k] > 10) {
           bool no_cumple = false;
           for(int a = 0; a < CANT_MAX_PRENDAS; a++) {
             if (matrix[a][k] == 1 && prendas_lavado[a] == numero_lavado) no_cumple = true;
@@ -56,8 +57,26 @@ int main() {
           }
         }
       }
+      numero_lavado++;  
     }
-    numero_lavado++;
+  }
+
+  for(int j = 0; j < CANT_MAX_PRENDAS; j++) {
+    if(prendas_lavado[j] == 0 && tiempos[j] <= 10) {
+      prendas_lavado[j] = numero_lavado;
+      for(int k = 0; k < CANT_MAX_PRENDAS; k++) {
+        if(matrix[j][k] != 1 && j != k && prendas_lavado[k] == 0  && tiempos[k] <= 10) {
+          bool no_cumple = false;
+          for(int a = 0; a < CANT_MAX_PRENDAS; a++) {
+            if (matrix[a][k] == 1 && prendas_lavado[a] == numero_lavado) no_cumple = true;
+          }
+          if(!no_cumple) {
+            prendas_lavado[k] = numero_lavado;
+          }
+        }
+      }
+      numero_lavado++;  
+    }
   }
   
   FILE *salida = fopen("salida.txt", "w");
@@ -65,7 +84,7 @@ int main() {
     fprintf(salida, "%d %d\n", i+1, prendas_lavado[i]);
   }
 
-  printf("   ");
+  /*printf("   ");
   for (int i = 0; i < matrix.size(); i++){
     printf("%d  ", i);
   }
@@ -84,6 +103,6 @@ int main() {
   }
   for (int i = 0; i < CANT_MAX_PRENDAS; i++) {
     printf("%d\n", prendas_lavado[i]);
-  }
+  }*/
   return 0;
 }
