@@ -6,3 +6,4 @@ TP2:
     - Veo que el puntaje mejoro, pero no demasiado. Pruebo achicando los intervalos en 4: De 0 a5, de 5 a 10, de 10 a 15 y de 15 a 20
     - Esto ultimo, a priori, no resultó. Pero si dividir en 2 segmentos: Probando dividir en el tiempo "8" resultó en mejorar los resultados, pero ya
     probar con "5" empeoró.
+    - Busco una alternativa, teniendo en cuenta un "rango" de 3 de diferencia entre los tiempos para ingresarlo en el mismo lavado si es que se cumple
