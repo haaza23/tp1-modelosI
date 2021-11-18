@@ -4,3 +4,5 @@ TP2:
     el resultado obtenido no es óptimo.
     - Pruebo dividiendo en "dos sectores" los lavados. Si tardan mas de 10, o si tardan menos de 10 y veo como influye en el puntaje obtenido.
     - Veo que el puntaje mejoro, pero no demasiado. Pruebo achicando los intervalos en 4: De 0 a5, de 5 a 10, de 10 a 15 y de 15 a 20
+    - Esto ultimo, a priori, no resultó. Pero si dividir en 2 segmentos: Probando dividir en el tiempo "8" resultó en mejorar los resultados, pero ya
+    probar con "5" empeoró.
