@@ -36,7 +36,7 @@ void load_prendas() {
 }
 
 bool isInRange(int num1, int num2) {
-  return (((num1 <= num2 + 3) && (num1 >= num2 - 3)) && ((num2 <= num1 + 3) && (num2 >= num1 - 3)));
+  return (abs(num1 - num2) <= 2);
 }
 
 int main() {
@@ -47,15 +47,36 @@ int main() {
   }
 
   for(int j = 0; j < CANT_MAX_PRENDAS; j++) {
-    if(prendas_lavado[j] == 0) {
+    if(prendas_lavado[j] == 0 && tiempos[j] > 8) {
       printf("%d  \n", j);
       prendas_lavado[j] = numero_lavado;
       for(int k = 0; k < CANT_MAX_PRENDAS; k++) {
-        if(matrix[j][k] != 1 && j != k && prendas_lavado[k] == 0  && tiempos[k] > 10 && tiempos[k] <= 15) {
+        if(matrix[j][k] != 1 && j != k && prendas_lavado[k] == 0 && tiempos[k] > 8) {
           bool no_cumple = false;
           for(int a = 0; a < CANT_MAX_PRENDAS; a++) {
-            if (matrix[a][k] == 1 && prendas_lavado[a] == numero_lavado || !isInRange(tiempos[j], tiempos[k])) no_cumple = true;
+            if (matrix[a][k] == 1 && prendas_lavado[a] == numero_lavado) no_cumple = true;
           }
+          if(!isInRange(tiempos[j], tiempos[k])) no_cumple = true;
+          if(!no_cumple) {
+            prendas_lavado[k] = numero_lavado;
+          }
+        }
+      }
+      numero_lavado++;  
+    }
+  }
+
+  for(int j = 0; j < CANT_MAX_PRENDAS; j++) {
+    if(prendas_lavado[j] == 0 && tiempos[j] <= 8) {
+      printf("%d  \n", j);
+      prendas_lavado[j] = numero_lavado;
+      for(int k = 0; k < CANT_MAX_PRENDAS; k++) {
+        if(matrix[j][k] != 1 && j != k && prendas_lavado[k] == 0 && tiempos[k] <= 8) {
+          bool no_cumple = false;
+          for(int a = 0; a < CANT_MAX_PRENDAS; a++) {
+            if (matrix[a][k] == 1 && prendas_lavado[a] == numero_lavado) no_cumple = true;
+          }
+          if(!isInRange(tiempos[j], tiempos[k])) no_cumple = true;
           if(!no_cumple) {
             prendas_lavado[k] = numero_lavado;
           }
