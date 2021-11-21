@@ -7,3 +7,7 @@ TP2:
     - Esto ultimo, a priori, no resultó. Pero si dividir en 2 segmentos: Probando dividir en el tiempo "8" resultó en mejorar los resultados, pero ya
     probar con "5" empeoró.
     - Busco una alternativa, teniendo en cuenta un "rango" de 3 de diferencia entre los tiempos para ingresarlo en el mismo lavado si es que se cumple
+    - Con estas condiciones me di cuenta que estaba limitando que prendas ingresar en cada lavado, por lo que se generaban mas lavados y por lo tanto demoraba m+as tiempo. 
+    Lo encaro de la siguiente forma: Meto primero las prendas que demoran más tiempo, y luego en esos mismos lavados intento de ingresar la mayor cantidad de prendas, ya que
+    necesariamente se debe demorar lo de la prenda más larga, que en ese lavado se aproveche lo más posible. Luego para las prendas incompatibles que no entraron en ningun lavado,
+    creo nuevos lavados. Si bien es la idea del codigo, por el momento no funciona.
