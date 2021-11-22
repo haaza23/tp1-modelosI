@@ -10,4 +10,6 @@ TP2:
     - Con estas condiciones me di cuenta que estaba limitando que prendas ingresar en cada lavado, por lo que se generaban mas lavados y por lo tanto demoraba m+as tiempo. 
     Lo encaro de la siguiente forma: Meto primero las prendas que demoran más tiempo, y luego en esos mismos lavados intento de ingresar la mayor cantidad de prendas, ya que
     necesariamente se debe demorar lo de la prenda más larga, que en ese lavado se aproveche lo más posible. Luego para las prendas incompatibles que no entraron en ningun lavado,
-    creo nuevos lavados. Si bien es la idea del codigo, por el momento no funciona.
+    creo nuevos lavados.
+    - Finalmente lo soluciono ordenando los lavados por tiempo en orden descendente y ya no me preocupo por quien entra primero que otro, ya que ya esta ordenado y todos los lavados "pesados"
+    incluyen la mayor cantidad de prendas compatibles posibles.

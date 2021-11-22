@@ -73,10 +73,10 @@ int main() {
       printf("lavado %d con tiempo %d\n", prendas[j].index+1, prendas[j].time);
       prendas[j].nro_lavado = numero_lavado;
       for(int k = 0; k < CANT_MAX_PRENDAS; k++) {
-        if(matrix[j][k] != 1 && prendas[k].nro_lavado == 0) {
+        if(matrix[prendas[j].index][prendas[k].index] != 1 && prendas[k].nro_lavado == 0) {
           bool no_cumple = false;
           for(int a = 0; a < k; a++) {
-            if (matrix[k][a] == 1 && prendas[a].nro_lavado == numero_lavado) {
+            if (matrix[prendas[k].index][prendas[a].index] == 1 && prendas[a].nro_lavado == numero_lavado) {
               no_cumple = true;
             }
           }
