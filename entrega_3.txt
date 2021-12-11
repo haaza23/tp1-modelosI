@@ -1,0 +1,13 @@
+TP3:
+    Idea inicial: Sigo los pasos que figuran en el enunciado, corriendo inicialmente el código sin ningun cambio. Puedo ver que finaliza a los 1800 segundos, con un resultado de 97.
+    Luego tomando los resultados obtenidos para el TP2, lo utilizo como input en la funcion buscarResultadoInicial(), pero veo como no baja de un puntaje de 98, por 
+    lo que luego modificando la variable maxColor ahi si veo un cambio que es hasta llegar a un puntaje de 91 (óptimo esperado) pero nunca cortaba.
+    Finalmente, agregando la restricción, donde se elimina la simetria por Xk>=Xk+1 finalmente se sigue obteniendo como puntaje 91, pero ademas el programa finaliza en un tiempo corto de tiempo.
+
+    Comentarios finales:
+    Utiliando el input inicial obteniendo del TP anterior, que si bien no era óptimo se tenia un resultado aceptable,
+    y utlizando esto como input para el algoritmo de coloreo de grafos podemos ver que se llega a la solución óptima y en un tiempo muy reducido.
+    Corriendo este mismo algoritmo sin un input inicial no se obtenia EL resultado óptimo y si asi fuere tardaría realmente mucho tiempo, por lo que 
+    con la logica aplicada en el TP anterior para acercarse a la solución óptima y luego aplicar ese resultado en este TP brinda la solución óptima en
+    menos de un minuto.
+
