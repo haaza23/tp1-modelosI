@@ -1,0 +1,52 @@
+Inicio
+Default row names c1, c2 ... being created.
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_MIP_Interval                            1000
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+Warning:  No solution found from 1 MIP starts.
+Tried aggregator 1 time.
+MIP Presolve eliminated 71725 rows and 0 columns.
+Reduced MIP has 80845 rows, 9120 columns, and 170525 nonzeros.
+Reduced MIP has 9025 binaries, 95 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.36 sec. (264.79 ticks)
+Found incumbent of value 1900.000000 after 0.66 sec. (554.51 ticks)
+Probing time = 0.11 sec. (11.56 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 80845 rows, 9120 columns, and 170525 nonzeros.
+Reduced MIP has 9025 binaries, 95 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.33 sec. (277.72 ticks)
+Probing time = 0.09 sec. (10.83 ticks)
+Clique table members: 71820.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 12 threads.
+Root relaxation solution time = 0.94 sec. (441.20 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                         1900.0000        0.0000           100.00%
+*     0+    0                          507.0000        0.0000           100.00%
+*     0+    0                          113.0000        0.0000           100.00%
+      0     0       20.0000   335      113.0000       20.0000     3509   82.30%
+      0     0       20.0000   969      113.0000     Cuts: 596     9248   82.30%
+*     0+    0                          112.0000       20.0000            82.14%
+      0     0       20.0000   499      112.0000      Cuts: 25    10003   82.14%
+      0     0       20.0000  1029      112.0000     Cuts: 657    14953   82.14%
+      0     2       29.3333   532      112.0000       20.0000    16939   82.14%
+Elapsed time = 38.17 sec. (24854.70 ticks, tree = 0.02 MB, solutions = 4)
+*   238+  172                          109.0000       48.5000            55.50%
+*   241+  172                          108.0000       48.5000            55.09%
+*   245+  172                          107.0000       48.5000            54.67%
+*   307   222      integral     0      106.0000       48.5000   542415   54.25%
+*   420+  304                          105.0000       48.5000            53.81%
+*   426+  291                          104.0000       48.5000            53.37%
+*   676   438      integral     0      103.0000       48.5000   964542   52.91%
+*   695   492      integral     0      102.0000       48.5000  1069751   52.45%
+   1000   667       93.0000   129      102.0000       54.5000  1426531   46.57%
+*  1313+  833                          101.0000       54.5000            46.04%
+*  1401   907      integral     0       99.0000       60.7877  1858506   38.60%
+*  1402   883      integral     0       98.0000       60.7877  1934649   37.97%
+   2000  1210    infeasible             98.0000       67.0000  2763006   31.63%

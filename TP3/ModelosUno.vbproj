@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{693BBD44-228E-4501-9BFD-90C7F58D6A9E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>ModelosUno</RootNamespace>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Console</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Debug\modelos_uno\modelos_uno.vcxproj.FileListAbsolute.txt" />
+    <Content Include="Debug\modelos_uno\vc143.pdb" />
+    <Content Include="graphs\inc\defs.h" />
+    <Content Include="graphs\inc\graph.h" />
+    <Content Include="graphs\inc\node.h" />
+    <Content Include="graphs\inc\nodesList.h" />
+    <Content Include="graphs\inc\pnode.h" />
+    <Content Include="graphs\inc\pnodesList.h" />
+    <Content Include="graphs\src\graph.c" />
+    <Content Include="graphs\src\graphics.c" />
+    <Content Include="graphs\src\node.c" />
+    <Content Include="graphs\src\nodesList.c" />
+    <Content Include="graphs\src\pnode.c" />
+    <Content Include="graphs\src\pnodesList.c" />
+    <Content Include="leer_dimac.c" />
+    <Content Include="leer_dimac.h" />
+    <Content Include="lhk_branch_and_cut.c" />
+    <Content Include="lhk_branch_and_cut.h" />
+    <Content Include="main.c" />
+    <Content Include="modelos_uno.pdb" />
+    <Content Include="modelos_uno.vcxproj.filters" />
+    <Content Include="tercer_problema.txt" />
+    <Content Include="UpgradeLog.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vs\ModelosUnoVS\project-colors.json" />
+    <None Include=".vs\ModelosUnoVS\v17\.suo" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\tp_modelos_uno.cpp\project-colors.json" />
+    <None Include=".vs\tp_modelos_uno.cpp\v17\.suo" />
+    <None Include=".vs\tp_modelos_uno.cpp\v17\ipch\AutoPCH\1290bd744c4f5110\LHK_BRANCH_AND_CUT.ipch" />
+    <None Include=".vs\tp_modelos_uno.cpp\v17\ipch\AutoPCH\4f6bb67917805ace\MAIN.ipch" />
+    <None Include=".vs\tp_modelos_uno.cpp\v17\ipch\AutoPCH\7eedd051a973102\LEER_DIMAC.ipch" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="app.config" />
+    <None Include="Debug\modelos_uno\graph.obj" />
+    <None Include="Debug\modelos_uno\graphics.obj" />
+    <None Include="Debug\modelos_uno\leer_dimac.obj" />
+    <None Include="Debug\modelos_uno\lhk_branch_and_cut.obj" />
+    <None Include="Debug\modelos_uno\main.obj" />
+    <None Include="Debug\modelos_uno\modelos_uno.Build.CppClean.log" />
+    <None Include="Debug\modelos_uno\modelos_uno.exe.recipe" />
+    <None Include="Debug\modelos_uno\modelos_uno.ilk" />
+    <None Include="Debug\modelos_uno\modelos_uno.log" />
+    <None Include="Debug\modelos_uno\modelos_uno.tlog\CL.command.1.tlog" />
+    <None Include="Debug\modelos_uno\modelos_uno.tlog\CL.read.1.tlog" />
+    <None Include="Debug\modelos_uno\modelos_uno.tlog\CL.write.1.tlog" />
+    <None Include="Debug\modelos_uno\modelos_uno.tlog\link.command.1.tlog" />
+    <None Include="Debug\modelos_uno\modelos_uno.tlog\link.read.1.tlog" />
+    <None Include="Debug\modelos_uno\modelos_uno.tlog\link.write.1.tlog" />
+    <None Include="Debug\modelos_uno\modelos_uno.tlog\modelos_uno.lastbuildstate" />
+    <None Include="Debug\modelos_uno\node.obj" />
+    <None Include="Debug\modelos_uno\nodesList.obj" />
+    <None Include="Debug\modelos_uno\pnode.obj" />
+    <None Include="Debug\modelos_uno\pnodesList.obj" />
+    <None Include="Debug\modelos_uno\vc143.idb" />
+    <None Include="modelos_uno.vcxproj" />
+    <None Include="tp.lp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\ModelosUno\v17\" />
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -5,7 +5,7 @@
 #include <bits/stdc++.h>
 
 #define CANT_MAX 500
-#define CANT_MAX_PRENDAS 385
+#define CANT_MAX_PRENDAS 95
 
 struct prenda
 {
@@ -23,7 +23,7 @@ bool termino = false;
 
 void load_prendas() {
   char line[CANT_MAX];
-  FILE *lavados = fopen("problema_2.txt", "r");
+  FILE *lavados = fopen("problema_3.txt", "r");
   while (fgets(line, sizeof(line), lavados)) {
     char flag_from_input;
     int x1 = 0, x2 = 0;
