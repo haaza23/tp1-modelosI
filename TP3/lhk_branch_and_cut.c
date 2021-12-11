@@ -167,6 +167,17 @@ static int populatebyrow(CPXENVptr env, CPXLPptr lp, bool **matriz, int* pesos, 
 	posicionVariables = (int*) malloc(Nr_vert * sizeof(int));
 	coeficienteVariables = (double*) malloc(Nr_vert * sizeof(double));
 
+	//Eliminacion Simetria por Xk>=Xk+1
+    for (k = 0; k < maximoColor - 1; k++) {
+        posicionVariables[0] = k;
+        coeficienteVariables[0] = 1;
+        posicionVariables[1] = k + 1;
+        coeficienteVariables[1] = -1;
+        status = CPXaddrows(env, lp, 0, 1, 2, NULL, "G", &zero, posicionVariables, coeficienteVariables, NULL, NULL);
+        if (status)
+            goto TERMINATE;
+    }
+
 	//Si el vertice i usa color k la variable de ese color debe pesar por lo menos el peso del vertice i
 	for (k = 0; k < maximoColor; k++) {
 		for (i = 0; i < Nr_vert; i++) {
